@@ -15,7 +15,7 @@ from shiny import *
 # TODO: Change the shinyswatch theme to morph, cosmo, darkly, flatly, sketchy (or other shinyswatch theme)
 # Preview at https://bootswatch.com/
 app_ui = ui.page_navbar(
-    shinyswatch.theme.minty(),
+    shinyswatch.theme.darkly(),
     ui.nav(
         "Home",
         ui.layout_sidebar(
@@ -35,15 +35,15 @@ app_ui = ui.page_navbar(
         ),
     ),
     # TODO: Update the links to reflect your own about, GitHub repo, and app
-    ui.nav(ui.a("About", href="https://github.com/denisecase")),
-    ui.nav(ui.a("GitHub", href="https://github.com/denisecase/cintel-02-app")),
-    ui.nav(ui.a("App", href="https://denisecase.github.io/cintel-02-app/")),
+    ui.nav(ui.a("About", href="https://github.com/WadeBryson")),
+    ui.nav(ui.a("GitHub", href="https://github.com/WadeBryson/cintel-02-app")),
+    ui.nav(ui.a("App", href="https://WadeBryson.github.io/cintel-02-app/")),
     ui.nav(ui.a("Shiny", href="https://shiny.posit.co/py/")),
     ui.nav(ui.a("Examples", href="https://shinylive.io/py/examples/")),
     ui.nav(ui.a("Themes", href="https://rstudio.github.io/py-shinyswatch/")),
     ui.nav(ui.a("Deploy", href="https://docs.posit.co/shinyapps.io/getting-started.html#working-with-shiny-for-python")),
     # TODO: Update the title to reflect yourname Dashboard
-    title=ui.h1("Case Dashboard"),
+    title=ui.h1("Wade Bryson Dashboard"),
 )
 
 
@@ -62,7 +62,7 @@ def server(input, output, session):
     @render.text
     def welcome_output():
         user = input.name_input();
-        welcome_string = f'Greetings {user}!';
+        welcome_string = f'Hello {user}!';
         return welcome_string
 
     @output
@@ -70,7 +70,7 @@ def server(input, output, session):
     def insights_output():
         answer = input.language_input()
         count = len(answer)
-        language_string = f'You like {answer}. That takes {count} characters'
+        language_string = f'I see that you like {answer}. That takes {count} characters'
         return language_string
 
 # Create a Shiny App by passing in the two parts defined above.
