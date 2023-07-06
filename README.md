@@ -24,7 +24,7 @@ You can sign in via GitHub for convenience.
 
 -----
 
-## First: Modify Your README.md
+## First: Modify the README.md
 
 You have a copy of this repository in your own GitHub account.
 The README.md file is the first thing people see when they visit your repository.
